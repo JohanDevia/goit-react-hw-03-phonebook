@@ -49,7 +49,8 @@ class Phonebook extends Component {
 
     if (isNameExists) {
       alert(`The contact ${name.trim()} is already in the agenda.`);
-      return; // Exit the function if the name is already in the agenda
+      return;
+      // Exit the function if the name is already in the agenda
     }
 
     if (name.trim() && number.trim()) {
