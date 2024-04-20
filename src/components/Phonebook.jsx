@@ -89,7 +89,7 @@ class Phonebook extends Component {
       <ul>
         {filteredContacts.map(contact => (
           <ContactsList key={contact.id}>
-            {contact.name}: {contact.number} {}
+            »{contact.name}: {contact.number} {}
             <button
               onClick={() => this.handleContactDelete(contact.id)}
               style={{ marginLeft: '10px' }}

@@ -23,4 +23,5 @@ export const FinderContacts = styled.div`
 export const ContactsList = styled.li`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3px;
 `;
