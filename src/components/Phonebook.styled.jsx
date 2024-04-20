@@ -15,3 +15,12 @@ export const FormPhonebook = styled.form`
   flex-direction: column;
   grid-gap: 5px;
 `;
+export const FinderContacts = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContactsList = styled.li`
+  display: flex;
+  justify-content: space-between;
+`;

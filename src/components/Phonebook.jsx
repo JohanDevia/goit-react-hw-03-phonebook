@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Container, FormPhonebook } from './Phonebook.styled';
+import {
+  Container,
+  FormPhonebook,
+  ContactsList,
+  FinderContacts,
+} from './Phonebook.styled';
 
 class Phonebook extends Component {
   constructor(props) {
@@ -83,12 +88,15 @@ class Phonebook extends Component {
     return (
       <ul>
         {filteredContacts.map(contact => (
-          <li key={contact.id}>
-            {contact.name} - {contact.number}
-            <button onClick={() => this.handleContactDelete(contact.id)}>
+          <ContactsList key={contact.id}>
+            {contact.name}: {contact.number} {}
+            <button
+              onClick={() => this.handleContactDelete(contact.id)}
+              style={{ marginLeft: '10px' }}
+            >
               Delete
             </button>
-          </li>
+          </ContactsList>
         ))}
       </ul>
     );
@@ -123,9 +131,9 @@ class Phonebook extends Component {
           <button type="submit">Add Contact</button>
         </FormPhonebook>
 
-        <div>
+        <FinderContacts>
           <p>Contacts</p>
-          <label htmlFor="filter">Search:</label>
+          <label htmlFor="filter">Search: </label>
           <input
             type="text"
             id="filter"
@@ -134,7 +142,7 @@ class Phonebook extends Component {
             value={filter}
             onChange={this.handleFilterChange}
           />
-        </div>
+        </FinderContacts>
 
         {this.renderContacts()}
       </Container>
